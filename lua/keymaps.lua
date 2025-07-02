@@ -23,6 +23,7 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' }
 -- vim.keymap.set('n', '<down>', <cmd>echo "Use j to move!!"<CR>')
 -- change buffers
 vim.keymap.set('n', '<leader>bn', '<cmd>bnext<CR>', { desc = 'Next buffer' })
+vim.keymap.set('n', '<leader>bd', '<cmd>bdelete<CR>', { desc = 'Delete buffer' })
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
 --
@@ -61,4 +62,5 @@ vim.keymap.set('v', '<localleader>mr', ':<C-u>MoltenEvaluateVisual<CR>gv', { sil
 vim.keymap.set('n', '<localleader>md', ':MoltenDelete<CR>', { silent = true, desc = 'molten delete cell' })
 vim.keymap.set('n', '<localleader>mh', ':MoltenHideOutput<CR>', { silent = true, desc = 'hide output' })
 vim.keymap.set('n', '<localleader>mo', ':noautocmd MoltenEnterOutput<CR>', { silent = true, desc = 'show/enter output' })
+-- oil.nvim keymap
 -- vim: ts=2 sts=2 sw=2 et

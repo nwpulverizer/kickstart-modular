@@ -1,7 +1,7 @@
 return {
   'echasnovski/mini.ai',
   event = 'VeryLazy',
-  dependencies = { 'GCBallesteros/NotebookNavigator.nvim' },
+  dependencies = { 'nwpulverizer/NotebookNavigator.nvim' },
   opts = function()
     local nn = require 'notebook-navigator'
 

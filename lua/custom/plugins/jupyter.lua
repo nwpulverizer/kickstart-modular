@@ -17,6 +17,7 @@ return {
       window_overlap_clear_enabled = true,
       window_overlap_clear_ft_ignore = { 'cmp_menu', 'cmp_docs', '' },
     },
+    markdown = { enabled = false },
   },
   {
     'nvimtools/hydra.nvim',
@@ -36,7 +37,7 @@ return {
     end,
   },
   {
-    'GCBallesteros/NotebookNavigator.nvim',
+    'nwpulverizer/NotebookNavigator.nvim',
     keys = {
       {
         ']h',
