@@ -4,7 +4,7 @@ return {
 --]]
   {
     '3rd/image.nvim',
-    build = false, -- so that it doesn't build the rock https://github.com/3rd/image.nvim/issues/91#issuecomment-2453430239
+    build = true, -- so that it doesn't build the rock https://github.com/3rd/image.nvim/issues/91#issuecomment-2453430239
     opts = {
       processor = 'magick_cli',
       -- image nvim options table. Pass to `require('image').setup`
@@ -16,8 +16,8 @@ return {
       max_width_window_percentage = math.huge,
       window_overlap_clear_enabled = true,
       window_overlap_clear_ft_ignore = { 'cmp_menu', 'cmp_docs', '' },
+      hijack_file_patterns = { '*.png', '*.jpg', '*.jpeg', '*.webp', '*.avif' }, -- render image files as images when opened
     },
-    markdown = { enabled = false },
   },
   {
     'nvimtools/hydra.nvim',
@@ -51,8 +51,8 @@ return {
           require('notebook-navigator').move_cell 'u'
         end,
       },
-      { '<leader>X', "<cmd>lua require('notebook-navigator').run_cell()<cr>" },
-      { '<leader>x', "<cmd>lua require('notebook-navigator').run_and_move()<cr>" },
+      { '<leader>X', "<cmd>lua require('notebook-navigator').run_cell()<cr>", desc = 'Run notebook cell' },
+      { '<leader>x', "<cmd>lua require('notebook-navigator').run_and_move()<cr>", desc = 'Run notebook cell and move' },
     },
     dependencies = {
       'echasnovski/mini.comment',
